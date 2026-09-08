@@ -15,7 +15,7 @@
 </style>
 <script>
     function show() {
-        document.getElementById("fig").src="sr.jpg";
+        document.getElementById("fig").src="sr.jpg"; 사진 파일을 sr.jpg로 해놓음
     }
     function hide() {
         document.getElementById("fig").src="";
