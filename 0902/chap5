@@ -10,10 +10,12 @@
     hr { height : 5px; border : solid grey;
          background-color : grey }
     span { color : blue; font-size : 20px; }
+    div { height : 130px; } 
+    #fig { height : 120px; }
 </style>
 <script>
     function show() {
-        document.getElementById("fig").src="myphoto.png";
+        document.getElementById("fig").src="sr.jpg";
     }
     function hide() {
         document.getElementById("fig").src="";
