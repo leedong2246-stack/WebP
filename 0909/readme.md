@@ -9,7 +9,7 @@ body : 브라우저의 내용을 보여줌
 브라우저 특징중에 하나가 겹쳐져 있는 white character를 빈칸으로 인식함
 빈칸은 &nbsp;를 사용
 01title_tag
-
+<> <- 시작 태그, (사이에 콘텐츠가 들어감) ,</> <- 종료 태그
 <!DOCTYPE html>
 <html lang="en">
 <head>
