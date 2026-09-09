@@ -10,9 +10,9 @@ body : 브라우저의 내용을 보여줌
 빈칸은 &nbsp;를 사용
 사진이 없는 경우 alt에 지정된 텍스트를 출력
 
-순서있는리스트(ordered list) -> (<ol></ol>)
-순서없는리스트(unordered list) -> (<ul></ul>)
-정의리스트(definition list) -> (<dl></dl>)  <dt>는 용어, <dd>는 설명
+순서있는리스트(ordered list) -> <ol></ol>
+순서없는리스트(unordered list) -> <ul></ul>
+정의리스트(definition list) -> <dl></dl>  <dt>는 용어, <dd>는 설명
 리스트를 <li>로 내용을 적음
 <table> 표 만들기
 table안에 td는 이미지, tr은 행
