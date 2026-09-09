@@ -6,7 +6,7 @@ head : 파일의 대한 정보를 적음
 body : 브라우저의 내용을 보여줌
 속성 값에 불필요한 공 문자, HTML5 표준에 어긋남
 태그와 속성은 대소문자 구분 없음
-
+브라우저 특징중에 하나가 겹쳐져 있는 white character를 빈칸으로 인식함
 01title_tag
 
 <!DOCTYPE html>
