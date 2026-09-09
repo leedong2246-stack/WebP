@@ -157,3 +157,28 @@ HTML 문서도 본문을여러단락으로
 </p>
 </body>
 </html>
+
+09divspanEx
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>&lt;div&gt;블록과&lt;span&gt;인라인</title>
+</head>
+<body>
+<h3>사랑</h3>
+<hr>
+<div style="background-color:skyblue; padding:20px;">
+내가사람의방언과천사의말을할지라도
+<span style="color:red">사랑</span>이없으면
+소리나는구리와울리는꽹과리가되고,
+<span style="color:red">사랑</span>이없으면아무
+것도아니라.
+</div>
+<p>
+~우리서로사랑하며살아요~
+</p>
+</body>
+</html>
+
