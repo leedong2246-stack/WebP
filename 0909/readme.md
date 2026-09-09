@@ -170,15 +170,14 @@ HTML 문서도 본문을여러단락으로
 <h3>사랑</h3>
 <hr>
 <div style="background-color:skyblue; padding:20px;">
-내가사람의방언과천사의말을할지라도
-<span style="color:red">사랑</span>이없으면
-소리나는구리와울리는꽹과리가되고,
-<span style="color:red">사랑</span>이없으면아무
-것도아니라.
+내가 사람의 방언과 천사의 말을 할지라도
+<span style="color:red">사랑</span>이 없으면
+소리 나는 구리와 울리는 꽹과리가 되고,
+<span style="color:red">사랑</span>이 없으면 아무
+것도 아니라.
 </div>
 <p>
-~우리서로사랑하며살아요~
+~우리 서로 사랑하며 살아요~
 </p>
 </body>
 </html>
-
