@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <metacharset="utf-8">
+        <title>둥근모서리테두리</title>
+        <style>
+            p {
+                background: #90D000;
+                width: 300px;
+                padding: 20px;
+            }
+
+            #round1 {
+                border-radius: 50px;
+            }
+
+            #round2 {
+                border-radius: 0px 20px 40px 60px;
+            }
+
+            #round3 {
+                border-radius: 0px 20px 40px;
+            }
+
+            #round4 {
+                border-radius: 0px 20px;
+            }
+
+            #round5 {
+                border-radius: 50px;
+                border-style: dotted;
+            }
+        </style>
+</head>
+
+<body>
+    <h3>둥근모서리테두리</h3>
+    <hr>
+    <p id="round1">반지름50픽셀의둥근모서리</p>
+    <p id="round2">반지름0, 20, 40, 60 둥근모서리</p>
+    <p id="round3">반지름0, 20, 40, 20 둥근모서리</p>
+    <p id="round4">반지름0, 20, 0, 20 둥근모서리</p>
+    <p id="round5">반지름50의둥근점선모서리</p>
+</body>
+
+</html>
