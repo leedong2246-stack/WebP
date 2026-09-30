@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <metacharset="utf-8">
+        <title>div 박스에그림자만들기</title>
+        <style>
+            .redBox {
+                box-shadow: 10px 10pxred;
+            }
+
+            .blurBox {
+                box-shadow: 10px 10px5px skyBlue;
+            }
+
+            .multiEffect {
+                box-shadow: 2px 2px2pxblack,
+                    0 0 25px blue,
+                    0 0 5px darkblue;
+            }
+
+            div {
+                width: 150px;
+                height: 70px;
+                padding: 10px;
+                border: 10px solid lightgray;
+                background-image:
+                    url("media/spongebob.png");
+                background-size: 150px 100px;
+                background-repeat: no-repeat;
+            }
+        </style>
+</head>
+
+<body>
+    <h3>박스그림자만들기</h3>
+    <hr>
+    <div class="redBox">뚱이와함께</div><br>
+    <div class="blurBox">뚱이와함께</div><br>
+    <div class="multiEffect">뚱이와함께</div>
+</body>
+
+</html>
