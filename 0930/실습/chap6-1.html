@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        @keyframes rotate-swing {
+            0% { transform: rotate(-90deg); }
+            50% { transform: rotate(0deg); }
+            100% { transform: rotate(90deg); }
+        }
+        img {
+            animation: rotate-swing 1s infinite alternate linear;
+        }
+    </style>
+</head>
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+    <img src="spongebob.png" width="100" alt="스폰지밥">
+</body>
+</html>
