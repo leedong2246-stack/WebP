@@ -1,2 +1,5 @@
-# WebP
-HelloWorld
+Content (내용): 텍스트나 이미지 등 실제 내용
+Padding (안쪽 여백): 내용과 테두리(Border) 사이의 여백
+Border (테두리): 요소를 둘러싸는 선
+Margin (바깥쪽 여백): 테두리 밖의 여백 (다른 요소와의 거리)
+
