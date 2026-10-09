@@ -25,7 +25,7 @@
 #pre는 내가 HTML에 입력한 내용을 그대로 보여줌 띄어쓰기, 엔터 같은거<br>
 #(b, i, strong 진하게), (em 강조),  (small 작은 문자), (del- 삭제), (ins_ 추가), (sup 윗첨자), (sub 아래첨자), (mark 하이라이팅)<br>
 
-#div<br>
+#div는 HTML에서 웹페이지의 구역(Division)을 나누거나 여러 요소를 하나로 묶을 때 사용하는 태그 <br>
 1. background 배경 <br>
 2. padding 상자 여백 <br>
 
