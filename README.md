@@ -76,3 +76,20 @@ clear : float의 영향을 끊어주는(해제하는) 속성<br>
 figure : 웹 페이지에 책이나 보고서 등 본문에 삽입하는 사진, 차트, 삽화, 소스코드 등을 통상적으로 ‘그림’으로 표현<br>
 1. figcaption : 제목이나 설명글을 보여줌 <br>
 2. code : 웹 페이지 안에서 소스 코드를 보여줄 때 사용 <br>
+
+#details : 내용을 담은 상자
+-> summary : 상자에 보여줄 큰 내용
+
+meter : 측정값 / 상태 (value / max) <br>
+progress : 진행 상황 / 과정 (value / max) <br>
+mark : 형광펜으로 색칠 <br>
+value : 현재 값 <br>
+max : 최대 값 <br>
+
+form : 사용자가 입력한 정보를 서버로 전송하기 위해서 사용 <br>
+name : form의 이름을 지정
+method =
+GET : 데이터를 주소창에 공개
+POST : 데이터를 숨김  
+submit : form에 담겨있는 데이터를 서버로 보냄 
+buttom : 일반 버튼이라서 아무 일 없음
