@@ -86,11 +86,11 @@ mark : 형광펜으로 색칠 <br>
 value : 현재 값 <br>
 max : 최대 값 <br>
 
-form : 사용자가 입력한 정보를 서버로 전송하기 위해서 사용 <br>
+#form : 사용자가 입력한 정보를 서버로 전송하기 위해서 사용 <br>
 name : form의 이름을 지정 <br>
 method = <br>
-GET : 데이터를 주소창에 공개<br>
-POST : 데이터를 숨김   <br>
+GET : 보내는 데이터를 주소창에 공개<br>
+POST : 보내는 데이터를 숨김   <br>
 submit : form에 담겨있는 데이터를 서버로 보냄 <br>
 buttom : 일반 버튼이라서 아무 일 없음<br>
 
@@ -101,12 +101,42 @@ rows : 세로 높이 "5" 기본적으로 5줄까지 보이는 높이 <br>
 datalist : 목록 리스트를 작성하는 태그<br>
 input : 타입을 적고 list에 속성 값이 바로 datalist에 id 이름을 가르킨다<br>
 input type = "text, image, submit, checkbox, radio"<br>
+checked : 이미 체크 된 상태로 시작 <br>
 
-checked : 이미 체크 된 상태로 시작
+raido에 name값이 같으면 1개만 체크가 가능 <br>
 
+#select는 드롭 다운하는 상자<br>
+option : 목록안에 들어가는 선택지들<br>
+label for = input id를 가르킴<br>
+type="password" 하면 가려져서 보임<br>
+label : 입력창 커서로 자동 이동<br>
 
+onchage : 값이 바뀌면 감지해서 실행해라 라는 스위치<br>
+document.body.style.color<br>
+document : 현재 보고 있는 웹페이지 전체 문서<br>
+body : 화면의 내용이 들어가는 <body> 태그 영역<br>
+style : 그 영역의 디자인(CSS)<br>
+color : 그 중에서도 글자 색상<br>
+this.value : 내가 방금 선택한 그 색상 값<br>
 
+type="month" (연도와 월)<br>
+type="week" (연도와 몇 번째 주)<br>
+type="date" (년-월-일 날짜)<br>
+type="time" (시간과 분)<br>
+type="datetime-local" (날짜 + 시간 한 번에)<br>
+value="2022-03-01T21:30:10.32"><br>
+T: 날짜와 시간을 구분해 주는 구분자 문자<br>
+type = "range" 는 화면에서 좌우로 움직이는 조작 막대<br>
+min	최소값	슬라이더를 맨 왼쪽으로 밀었을 때 값	min="0"<br>
+max	최대값	슬라이더를 맨 오른쪽으로 밀었을 때 값	max="100"<br>
+value	기본값	처음에 손잡이가 위치해 있을 시작 값	value="50"<br>
+step	이동 간격	손잡이를 움직일 때 몇 칸씩 이동할지	step="5" (5씩 증가/감소)<br>
 
+placeholder="내용" 은 입력창 안에 연한 회색으로 보여주는 미리보기 안내 문구입니다.<br>
+type="email" :  @ 기호가 들어갔는지 자동으로 검사<br>
+type="url" : http:// 나 https:// 형태의 올바른 주소인지 자동으로 검사합니다.<br>
+type="tel" : 스마트폰에서 이 칸을 터치하면 문자 자판이 아니라 숫자 키패드(전화 키패드)가 바로 열려 입력이 편해진다<br>
+type="search" : 글자를 입력하면 우측 끝에 X (전체 지우기) 버튼이 자동으로 생겨서 내용을 한 번에 싹 지울 수 있다<br>
 
 
 
