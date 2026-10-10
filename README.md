@@ -87,13 +87,26 @@ value : 현재 값 <br>
 max : 최대 값 <br>
 
 form : 사용자가 입력한 정보를 서버로 전송하기 위해서 사용 <br>
-name : form의 이름을 지정
-method =
-GET : 데이터를 주소창에 공개
-POST : 데이터를 숨김  
-submit : form에 담겨있는 데이터를 서버로 보냄 
-buttom : 일반 버튼이라서 아무 일 없음
+name : form의 이름을 지정 <br>
+method = <br>
+GET : 데이터를 주소창에 공개<br>
+POST : 데이터를 숨김   <br>
+submit : form에 담겨있는 데이터를 서버로 보냄 <br>
+buttom : 일반 버튼이라서 아무 일 없음<br>
 
-textarea : 텍스트를 담을 수 있는 큰 상자
-cols : 가로 너비 "30"은 한 줄에 30글자 적을 수 있음
-rows : 세로 높이 "5" 기본적으로 5줄까지 보이는 높이 
+textarea : 텍스트를 담을 수 있는 큰 상자<br>
+cols : 가로 너비 "30"은 한 줄에 30글자 적을 수 있음<br>
+rows : 세로 높이 "5" 기본적으로 5줄까지 보이는 높이 <br>
+
+datalist : 목록 리스트를 작성하는 태그<br>
+input : 타입을 적고 list에 속성 값이 바로 datalist에 id 이름을 가르킨다<br>
+input type = "text, image, submit, checkbox, radio"<br>
+
+checked : 이미 체크 된 상태로 시작
+
+
+
+
+
+
+
