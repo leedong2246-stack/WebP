@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>큰 자리수와 낮은자리수 같은지 비교</title>
+</head>
+<body>
+    <h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        let inputStr = prompt("숫자 입력", "");
+        let n = parseInt(inputStr);
+
+        if (!isNaN(n)) {
+            let lowest = n % 10; // 제일 낮은 자리 숫자
+            let highest = n;
+
+            // 제일 큰 자리 숫자 구하기 (10 이하가 될 때까지 나누기)
+            while (highest >= 10) {
+                highest = Math.floor(highest / 10);
+            }
+
+            if (highest === lowest) {
+                document.write(inputStr + ": 같음");
+            } else {
+                document.write(inputStr + ": 다름");
+            }
+        }
+    </script>
+</body>
+</html>
