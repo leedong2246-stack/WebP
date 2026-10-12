@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>break 문</title>
+</head>
+
+<body>
+    <h3>1에서얼마까지더해야3000을넘는가?</h3>
+    <hr>
+    <script>
+        let i = 0, sum = 0;
+        while (true) { // 무한반복
+            sum += i;
+            if (sum > 3000)
+                break; // 합이3000보다큼. 반복문벗어남
+            i++;
+        }
+        document.write(i + "까지더하면3000을넘음: " + sum);
+    </script>
+</body>
+
+</html>

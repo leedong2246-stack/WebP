@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>continue 문</title>
+</head>
+
+<body>
+    <h3>3으로나눈나머지가1인수만더하기</h3>
+    <hr>
+    <script>
+        let sum = 0;
+        for (let i = 1; i <= 10; i++) { // i가1에서10까지반복
+            if (i % 3 != 1) // 3으로나눈나머지가1이아닌경우
+                continue; // 다음반복으로점프(i++ 코드로)
+            document.write(i + " ");
+            sum += i;
+        }
+        document.write("합은" + sum);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPEhtml>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>변수선언</title>
+    </head>
+
+    <body>
+        <h3>변수선언, 전역/지역/블록변수</h3>
+        <hr>
+        <script>
+            let x; // 전역변수x 선언. var로선언해도동일
+            function f() {
+                let y; // 함수f() 내에서만사용되는지역변수y 선언. var로선언해도동일
+                x = 10; // 전역변수x에10 저장
+                y = 20; // 지역변수y에20 저장
+                z = 30; // 새로운전역변수z가선언되고30이저장됨
+                if (y == 20) {
+                    let b = 40; // if 블록에서만사용되는블록변수b 선언
+                    b++;
+                    document.write("if 블록내블록변수b = " + b + "<br>");
+                }
+                // 이곳에서는블록변수b에접근할수없음
+                // 이곳에서는변수x, y, z에모두접근가능
+                document.write("함수f() 내지역변수y = " + y + "<br>");
+            }
+            f(); // 함수f() 호출
+            document.write("전역변수x = " + x + "<br>");
+            document.write("전역변수z = " + z);
+            // 이곳에서는변수x와z만접근가능, 지역변수y와블록변수b는접근불가
+        </script>
+    </body>
+
+    </html>

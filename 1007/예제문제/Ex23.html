@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트전역함수</title>
+    <script>
+        function evalParseIntIsNaN() {
+            let res = eval("2*3+4*6"); // res는30
+            document.write("eval(\"2*3+4*6\")는" + res + "<br>");
+            let m = parseInt("32");
+            document.write("parseInt(\"32\")는" + m + "<br>");
+            let n = parseInt("0x32");
+            document.write("parseInt(\"0x32\")는" + n + "<br><br>");
+            // "hello"는정수로변환할수없으므로parseInt("hello")는NaN리턴
+            n = parseInt("hello");
+            if (isNaN(n)) // true
+                document.write("hello는숫자가아닙니다.");
+        }
+    </script>
+</head>
+
+<body>
+    <h3>eval(), parseInt(), isNaN()</h3>
+    <hr>
+    <script>
+        evalParseIntIsNaN();
+    </script>
+</body>
+
+</html>
