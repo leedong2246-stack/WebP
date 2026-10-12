@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>별 문자 출력하기</title>
+    <script>
+        function printStar(n) {
+            let num = parseInt(n);
+            // 정수가 아니거나, 0 이하이거나, 소수점이 있는 경우 예외 처리
+            if (isNaN(num) || num <= 0 || num != parseFloat(n)) {
+                document.write("입력 오류 입니다.");
+                return;
+            }
+
+            for (let i = 1; i <= num; i++) {
+                for (let j = 0; j < i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>별 문자 출력하기</h3>
+    <hr>
+    <script>
+        let input = prompt("정수를 입력하세요", "");
+        printStar(input);
+    </script>
+</body>
+
+</html>
