@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>리터럴표기법으로사용자객체만들기</title>
+    <script>
+        let account = {
+            owner: "황기태",
+            code: "111",
+            balance: 35000, 
+            // 메소드작성
+            inquiry: function () { return this.balance; }, 
+            deposit: function (money) { this.balance += money; }, 
+            withdraw: function (money) { 
+                this.balance -= money;
+                return money;
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h3>리터럴표기법으로사용자객체만들기</h3>
+    <hr>
+    <script>
+        document.write("account : ");
+        document.write(account.owner + ", ");
+        document.write(account.code + ", ");
+        document.write(account.balance + "<br>");
+        account.deposit(10000); 
+        document.write("10000원저금후잔액은" + account.inquiry() + "<br>");
+        account.withdraw(5000); 
+        document.write("5000원인출후잔액은" + account.inquiry() + "<br>");
+    </script>
+</body>
+
+</html>
