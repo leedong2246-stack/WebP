@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Math를활용한구구단연습</title>
+    <script>
+        function randomInt() { 
+            return Math.floor(Math.random() * 9) + 1;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Math를활용한구구단연습</h3>
+    <hr>
+    <script>
+        let ques = randomInt() + "*" + randomInt();
+        let user = prompt(ques + " 값은얼마입니까?", 0);
+        if (user == null) {
+            document.write("구구단연습을종료합니다");
+        }
+        else {
+            let ans = eval(ques); 
+            if (ans == user) 
+                document.write("정답! ");
+            else
+                document.write("아니오! ");
+            document.write(ques + "=" + "<strong>" + ans
+                + "</strong>입니다<br>");
+        }
+    </script>
+</body>
+
+</html>
