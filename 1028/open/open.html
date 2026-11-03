@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>갬블링 게임</title>
+    <style>
+        div.box {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border: 1px solid magenta;
+            text-align: center;
+            font-size: 30pt;
+            font-family: monospace;
+            font-weight: bold;
+            color: blue;
+            background-color: aliceblue;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 14pt;
+            color: violet;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let nums = [0, 0, 0];
+        let clicked = [false, false, false];
+
+        function changeNum(index, obj) {
+            // 이미 3개를 모두 클릭한 상태에서 박스 클릭 시 게임 리셋
+            if (clicked[0] && clicked[1] && clicked[2]) {
+                resetGame();
+                return;
+            }
+
+            // 순서대로 클릭하게 보장 (이전 카드가 클릭되지 않았다면 반응하지 않음)
+            if (index > 0 && !clicked[index - 1]) return;
+            if (clicked[index]) return;
+
+            // 0 ~ 2 난수 생성
+            let rand = Math.floor(Math.random() * 3);
+            nums[index] = rand;
+            obj.innerHTML = rand;
+            clicked[index] = true;
+
+            // 마지막 3번째 숫자까지 클릭되면 판정
+            if (clicked[0] && clicked[1] && clicked[2]) {
+                let resDiv = document.getElementById("result");
+                if (nums[0] === nums[1] && nums[1] === nums[2]) {
+                    resDiv.innerHTML = "Success(click here to do again)";
+                } else {
+                    resDiv.innerHTML = "fail(click here to do again)";
+                }
+            }
+        }
+
+        function resetGame() {
+            let boxes = document.getElementsByClassName("box");
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].innerHTML = "0";
+                nums[i] = 0;
+                clicked[i] = false;
+            }
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>갬블링 게임</h3>
+    <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+    <hr>
+    <div class="box" onclick="changeNum(0, this)">0</div>
+    <div class="box" onclick="changeNum(1, this)">0</div>
+    <div class="box" onclick="changeNum(2, this)">0</div>
+    <div id="result" onclick="resetGame()"></div>
+</body>
+
+</html>
