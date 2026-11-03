@@ -1,0 +1,38 @@
+v
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM 객체 동적 삽입 및 삭제</title>
+    <script>
+        function addAnswer(btnObj, text) {
+            let p = document.createElement("p");
+            p.innerHTML = text;
+
+            // 생성된 p 객체 클릭 시 자기 자신을 삭제
+            p.onclick = function () {
+                let parent = this.parentElement;
+                parent.removeChild(this);
+            };
+
+            let parent = btnObj.parentElement;
+            parent.appendChild(p);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>정답의 동적 삽입</h3>
+    <hr>
+    <div>
+        <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+        <button onclick="addAnswer(this, '백설공주')">답보기</button>
+    </div>
+    <div>
+        <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+        <button onclick="addAnswer(this, '둘다')">답보기</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>transform:scale()</title>
+    <script>
+        let scaleX = 1;
+        function scaleImg(img) {
+            scaleX++;
+            if (scaleX > 4) scaleX = 2; // 2, 3, 4배 반복
+            img.style.transform = "scale(" + scaleX + ", 1)";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+    <hr>
+    <img src="media/spongebob.png" width="100" onclick="scaleImg(this)">
+</body>
+
+</html>
