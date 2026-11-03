@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>문서의동적구성</title>
+    <script>
+        function createDIV() {
+            letobj = document.getElementById("parent");
+            letnewDIV = document.createElement("div");
+            newDIV.innerHTML = "새로생성된DIV입니다.";
+            newDIV.setAttribute("id", "myDiv");
+            newDIV.style.backgroundColor = "yellow";
+            newDIV.onclick = function () {
+                let p = this.parentElement; // 부모HTML 태그요소
+                p.removeChild(this); // 자신을부모로부터제거
+            };
+            obj.appendChild(newDIV);
+        }
+    </script>
+</head>
+    
+<body id="parent">
+    <h3>DIV 객체를동적으로생성, 삽입, 삭제하는예제</h3>
+    <hr>
+    <p>DOM 트리에동적으로객체를삽입할수있습니다.
+        createElement(), appendChild(),
+        removeChild() 메소드를이용하여새로운객체를생성,
+        삽입, 삭제하는예제입니다.</p>
+    <a href="javascript:createDIV()">DIV 생성</a>
+    <p>
+    <p>
+</body>
+
+</html>

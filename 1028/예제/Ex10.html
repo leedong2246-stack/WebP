@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML 문서작성기만들기</title>
+    <script>
+        let win = null;
+        function showHTML() {
+            if (win == null || win.closed)
+                win = window.open("", "outWin", "width=300,height=200");
+            let textArea = document.getElementById("srcText");
+            win.document.open();
+            win.document.write(textArea.value);
+            win.document.close();
+        }
+    </script>
+</head>
+
+<body>
+    <h3>HTML 문서작성기만들기</h3>
+    <hr>
+    <p>아래에HTML 문서를작성하고버튼을클릭해보세요.
+        새윈도우에HTML 문서가출력됩니다.</p>
+    <textareaid="srcText" rows="10" cols="50"></textarea>
+        <br>
+        <br>
+        <button onclick="showHTML()">HTML 문서출력하기</button>
+</body>
+
+</html>
