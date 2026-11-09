@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>마우스 클릭 연습</title>
+    <style>
+        table { border-collapse: collapse; }
+        td { width: 35px; height: 35px; border: 1px solid blue; text-align: center; }
+        img { width: 30px; height: 30px; cursor: pointer; }
+    </style>
+    <script>
+        function moveImage() {
+            let imgs = document.images;
+            // 모든 이미지 지우기
+            for(let i = 0; i < imgs.length; i++) {
+                imgs[i].src = "";
+            }
+            // 0~99 중 하나를 랜덤으로 뽑아 이미지 출력
+            let randIndex = Math.floor(Math.random() * 100);
+            imgs[randIndex].src = "donkey.png";
+        }
+
+        function init() {
+            let tableHTML = "<table>";
+            for(let i = 0; i < 10; i++) {
+                tableHTML += "<tr>";
+                for(let j = 0; j < 10; j++) {
+                    tableHTML += "<td><img src='' onclick='moveImage()'></td>";
+                }
+                tableHTML += "</tr>";
+            }
+            tableHTML += "</table>";
+            document.getElementById("container").innerHTML = tableHTML;
+            moveImage(); // 시작할 때 첫 위치 지정
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+    <div id="container"></div>
+</body>
+</html>
