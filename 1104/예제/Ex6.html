@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>이벤트객체프로퍼티</title>
+</head>
+
+<body>
+    <h3>이벤트객체의프로퍼티출력</h3>
+    <hr>
+    <p id="p">버튼을클릭하면이벤트객체를출력합니다.</p>
+    <button onclick="f(event)">클릭하세요</button>
+    <script>
+        functionf(e) { // e는현재발생한이벤트객체
+            let text = "type: " + e.type + "<br>"
+                + "target: " + e.target + "<br>"
+                + "currentTarget: " + e.currentTarget + "<br>"
+                + "defaultPrevented: " + e.defaultPrevented;
+            let p = document.getElementById("p");
+            p.innerHTML = text; // 이벤트객체의프로퍼티출력
+        }
+    </script>
+</body>
+
+</html>

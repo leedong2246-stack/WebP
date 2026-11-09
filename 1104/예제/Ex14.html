@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>onload로이미지크기출력</title>
+    <script>
+        function changeImage() {
+            let sel = document.getElementById("sel");
+            let img = document.getElementById("myImg");
+            img.onload = function () { // 이미지크기출력
+                let mySpan = document.getElementById("mySpan");
+                mySpan.innerHTML = img.width + "x" + img.height;
+            }
+            let index = sel.selectedIndex; // 선택된옵션인덱스
+            img.src = sel.options[index].value; // <option>의value 속성
+        }
+    </script>
+</head>
+
+<body onload="changeImage()">
+    <h3>onload로이미지크기출력</h3>
+    <hr>
+    <form>
+        <select id="sel" onchange="changeImage()">
+            <option value="images/apple.png">사과
+            <option value="images/banana.png">바나나
+            <option value="images/mango.png">망고
+        </select>
+        <span id="mySpan">이미지크기</span> 
+    </form>
+    <p>
+        <imgid="myImg" src="media/apple.png" alt=".">
+    </p>
+</body>
+
+</html>

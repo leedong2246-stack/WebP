@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>select 객체에서선택한과일출력</title>
+    <script>
+        function drawImage() {
+            let sel = document.getElementById("fruits");
+            let img = document.getElementById("fruitimage");
+            img.src = sel.options[sel.selectedIndex].value;
+        }
+    </script>
+</head>
+
+<body onload="drawImage()">
+    <h3>select 객체에서선택한과일출력</h3>
+    <hr>
+    과일을선택하면이미지가출력됩니다.<p>
+    <form>
+        <select id="fruits" onchange="drawImage()">
+            <option value="media/strawberry.png">딸기
+            <option value="media/banana.png" selected>바나나
+            <option value="media/apple.png">사과
+        </select>
+        <imgid="fruitimage" src="media/banana.gif" alt="">
+    </form>
+</body>
+
+</html>

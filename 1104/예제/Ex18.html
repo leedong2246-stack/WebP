@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>선택된물품계산하기</title>
+    <script>
+        let sum = 0;
+        function calc(cBox) {
+            if (cBox.checked)
+                sum += parseInt(cBox.value);
+            else
+                sum -= parseInt(cBox.value);
+            document.getElementById("sumtext").value = sum;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>물품을선택하면금액이자동계산됩니다</h3>
+    <hr>
+    <form>
+        <input type="checkbox" name="hap" value="10000" onclick="calc(this)">모자1만원
+        <input type="checkbox" name="shose" value="30000" onclick="calc(this)">구두3만원
+        <input type="checkbox" name="bag" value="80000" onclick="calc(this)">명품가방8만원<br>
+        지불하실금액<input type="text" id="sumtext" value="0">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>키이벤트</title>
+    <script>
+        functionwhatKeyDown(e) {
+            let str = "";
+            let div = document.getElementById("div");
+            div.innerHTML = ""; // div 객체내용초기화
+            str += "e.key= " + e.key + "<br>";
+            str += "e.code= " + e.code + "<br>";
+            div.innerHTML = str; // div 객체에html 문자열출력
+        }
+    </script>
+</head>
+
+<body>
+    <h3>키리스너와키이벤트객체의프로퍼티</h3>
+    <hr>
+    텍스트창에키를눌러보세요. Alt, Shift, Ctrl 키도가능합니다.<br>
+    <input type="text" id="text" onkeydown="whatKeyDown(event)">
+    <div id="div" style="background-color:skyblue; width:250px; height:50px">
+    </div>
+</body>
+
+</html>

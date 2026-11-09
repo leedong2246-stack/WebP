@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>oncontextmenu</title>
+    <script>
+        function hideMenu() {
+            alert("오른쪽 클릭<컨텍스트 메뉴>금지");
+            return false;
+        }
+        document.oncontextmenu = hideMenu;
+    </script>
+</head>
+
+<body>
+    <h3>oncontextmenu에서 컨텍스트 메뉴 금지</h3>
+    <hr>
+    마우스오른쪽클릭은금지됩니다. 아무곳이나
+    클릭해도컨텍스트메뉴를볼수없습니다.
+    <img src="media/beach2.png" alt="miami">
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM 객체의이벤트리스너프로퍼티에함수등록</title>
+    <script>
+        let p;
+        functioninit() {
+            p = document.getElementById("p");
+            p.onmouseover = over; 
+            p.onmouseout = out; 
+        }
+        function over() {
+            p.style.backgroundColor = "orchid";
+        }
+        function out() {
+            p.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <h3>DOM 객체의이벤트리스너프로퍼티에함수등록</h3>
+    <hr>
+    <p id="p">마우스올리면orchid 색으로변경</p>
+</body>
+
+</html>
