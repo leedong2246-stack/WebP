@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>이벤트 객체의 target</title>
+    <script>
+        window.onmouseover = function(e) {
+            if(e.target.tagName == "SPAN") {
+                e.target.style.textDecoration = "underline";
+            }
+        }
+        window.onmouseout = function(e) {
+            if(e.target.tagName == "SPAN") {
+                e.target.style.textDecoration = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3><span>span 태그에만 onmouseover/onmouseout</span></h3>
+    <hr>
+    <p><span>span 태그에 대해서만 마우스가 올라올 때 </span>밑줄이 그어지고 <span>마우스가 내려갈 때 </span>밑줄이 사라지도록 자바스크립트 코드를 작성한다.</p>
+</body>
+</html>

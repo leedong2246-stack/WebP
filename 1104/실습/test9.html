@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>onmouseover과 onmouseout</title>
+    <style>
+        #tooltip {
+            position: absolute;
+            background-color: aliceblue;
+            border: 1px solid green;
+            padding: 5px;
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        let textArr = [
+            "빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다",
+            "아침에 1권, 점심에 1권, 저녁에 1권 읽기",
+            "수영 3.8km, 자전거 180km, 마라톤 42.195km",
+            "웹 프로그래밍의 핵심 자바스크립트 마스터하기"
+        ];
+
+        function showTooltip(e, idx) {
+            let tooltip = document.getElementById("tooltip");
+            tooltip.innerHTML = textArr[idx];
+            tooltip.style.left = (e.clientX + 10) + "px";
+            tooltip.style.top = (e.clientY + 10) + "px";
+            tooltip.style.visibility = "visible";
+        }
+
+        function hideTooltip() {
+            document.getElementById("tooltip").style.visibility = "hidden";
+        }
+    </script>
+</head>
+<body>
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li onmouseover="showTooltip(event, 0)" onmouseout="hideTooltip()">자전거로 대한민국 일주</li>
+        <li onmouseover="showTooltip(event, 1)" onmouseout="hideTooltip()">책 100권 읽기</li>
+        <li onmouseover="showTooltip(event, 2)" onmouseout="hideTooltip()">철인 3종 경기 준비</li>
+        <li onmouseover="showTooltip(event, 3)" onmouseout="hideTooltip()">자바스크립트 정복</li>
+    </ul>
+    <div id="tooltip"></div>
+</body>
+</html>

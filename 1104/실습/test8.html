@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>이벤트 객체의 target</title>
+    <script>
+        function init() {
+            let lis = document.getElementsByTagName("li");
+            for(let i = 0; i < lis.length; i++) {
+                lis[i].onclick = function() {
+                    // 모든 li의 글자 크기를 기본(1em)으로 초기화
+                    for(let j = 0; j < lis.length; j++) {
+                        lis[j].style.fontSize = "1em";
+                    }
+                    // 클릭된 항목만 1.3em으로 변경
+                    this.style.fontSize = "1.3em";
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 읽기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>onwheel</title>
+    <script>
+        function zoom(e) {
+            e.preventDefault(); // 기본 웹 스크롤 방지
+            let img = document.getElementById("img");
+            
+            if(e.deltaY < 0) {
+                // 휠을 위로 굴릴 때 5% 축소
+                img.width = img.width * 0.95;
+            } else {
+                // 휠을 아래로 굴릴 때 5% 확대
+                img.width = img.width * 1.05;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+    <hr>
+    <p>이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.</p>
+    <img id="img" src="tulip.jpg" width="300" onwheel="zoom(event)">
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>onwheel</title>
+    <script>
+        function zoom(e) {
+            e.preventDefault(); // 기본 웹 스크롤 방지
+            let img = document.getElementById("img");
+            
+            if(e.deltaY < 0) {
+                // 휠을 위로 굴릴 때 5% 축소
+                img.width = img.width * 0.95;
+            } else {
+                // 휠을 아래로 굴릴 때 5% 확대
+                img.width = img.width * 1.05;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+    <hr>
+    <p>이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.</p>
+    <img id="img" src="tulip.jpg" width="300" onwheel="zoom(event)">
+</body>
+</html>
