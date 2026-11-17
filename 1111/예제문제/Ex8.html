@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>onbeforeprint와onafterprint</title>
+    <style>
+        #logoDiv {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* 로고이미지를문서의밑바닥에배치*/
+        }
+    </style>
+    <script>
+        window.onbeforeprint = function (e) {
+            let logoDiv = document.getElementById("logoDiv");
+            logoDiv.style.display = "block"; // block으로변경. 로고가화면에나타나게함
+        }
+        window.onafterprint = hideLogo;
+        function hideLogo() {
+            let logoDiv = document.getElementById("logoDiv");
+            logoDiv.style.display = "none"; // 로고를보이지않게함
+        } 
+    </script>
+</head>
+
+<body>
+    <h3>onbeforeprint, onafterprint이벤트예</h3>
+    <hr>
+    <div id="logoDiv">
+        <imgsrc="media /logo.png" alt="이미지없습니다.">
+    </div>
+    <p>안녕하세요. 브라우저윈도우에서는보이지않지만, 프린트시에는회사로고가출력되는예제를
+        보입니다. 마우스오른쪽버튼을눌러인쇄미리보기메뉴를선택해보세요.</p>
+</body>
+
+</html>
